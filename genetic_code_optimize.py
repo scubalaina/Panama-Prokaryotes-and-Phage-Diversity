@@ -57,7 +57,7 @@ for i in os.listdir(inputdir):
 		for code in codes:
 
 			#protein = os.path.join(outputdir, re.sub(".fna", "."+str(code)+".faa", i))
-			protein = outputdir + genome + "." + code + ".prot.faa"
+			protein = outputdir + genome + "." + code + ".prots.faa"
 			orfs = outputdir + genome + "." + code + ".orfs.fna"
 			#print(protein)
 
