@@ -37,7 +37,11 @@ subprocess.call(cmd2, stdout=open("test_out", "w"), stderr=open("test_err", "w")
 
 # run blastn
 blastout = out_prefix + "_blast_tbl.tsv"
-blast_cmd = "blastn -query " + input_seq + " -out " + blastout + " -db " + blastdb_name + " -evalue 0.001 -outfmt 6"
+blast_cmd = str()
+if seq_type == "nucl":
+	blast_cmd = "blastn -query " + input_seq + " -out " + blastout + " -db " + blastdb_name + " -evalue 0.001 -outfmt 6"
+elif seq_type == "prot":
+	blast_cmd = "blastp -query " + input_seq + " -out " + blastout + " -db " + blastdb_name + " -evalue 0.001 -outfmt 6"
 print(blast_cmd)
 blast_cmd2 = shlex.split(blast_cmd)
 subprocess.call(blast_cmd2, stdout=open("test_out", "w"), stderr=open("test_err", "w"))
