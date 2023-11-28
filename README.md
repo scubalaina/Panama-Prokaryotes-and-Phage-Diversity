@@ -1,3 +1,3 @@
 # panama_phages
 
-Welcome! I'll be depositing scripts used to analyze the diversity of phages in metagenomes using marker-gene and contig-based approaches.
+Welcome! This repository contains scripts and data used for the manuscript Contrasting drivers of abundant phage and prokaryotic communities revealed in diverse coastal ecosystems by Weinheimer et al in ISME Communications.
